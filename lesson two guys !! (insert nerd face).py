@@ -46,5 +46,19 @@ cv2.waitKey(0)
 catx=cv2.copyMakeBorder(cat,50,50,50,50,cv2.BORDER_REFLECT,value=1)
 cv2.imshow("b",catx)
 
+#blurring technique 1
+tiiger=cv2.imread("tiiger.jpg")
+cv2.imshow("#rawr",tiiger)
+#gaussian blurring
+bone=cv2.GaussianBlur(tiiger,(11,11),0)
+cv2.imshow("#rawrbutimstillbadatphotograpysoishoulddefitinlyhiresomeonenexttime",bone)
+
+#median blurring
+btwo=cv2.medianBlur(tiiger,13)
+cv2.imshow("#idonthaveenoughmoneytokiresomebodyandnowsomeonewantsmetorecoredamoviebutineedthemoneysoiwilldoitwithmybadphotograpyskillsandprobablybadcamera",btwo)
+
+#bilateral blurring
+bilateral=cv2.bilateralFilter(tiiger,9,75,75)
+cv2.imshow("#igotfiredoffmyjobtobeamovierecorderbecaueof myskillsandtheyharshlytodmethatimtheproblemandmycameraisfineandactuallygoodqualitysoimusttakephotographyskills",bilateral)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
